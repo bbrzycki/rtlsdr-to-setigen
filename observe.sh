@@ -33,7 +33,7 @@ done
 shift $((OPTIND-1))
 
 # Check required switches exist
-if [ -z "${f}" ] || [ -z "${t}" ] || [ -z "${d}" ]; then
+if [ -z "${FREQUENCY}" ] || [ -z "${TIME}" ] || [ -z "${DESTINATION}" ]; then
     usage
 fi
 
