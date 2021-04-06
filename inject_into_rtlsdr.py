@@ -69,11 +69,11 @@ antenna.x.add_signal(iq_signal(f))
 # Add synthetic signals
 antenna.x.add_noise(0, 1)
 
-level = stg.voltage.get_intensity(snr=3e4, 
-                                  raw_voltage_backend=rvb,
-                                  obs_length=60, 
-                                  length_mode='obs_length',
-                                  fftlength=fftlength)
+level = stg.voltage.get_level(snr=3e4, 
+                              raw_voltage_backend=rvb,
+                              obs_length=60, 
+                              length_mode='obs_length',
+                              fftlength=fftlength)
 
 unit_drift_rate = stg.voltage.get_unit_drift_rate(rvb,
                                                   fftlength=fftlength,
