@@ -71,9 +71,9 @@ antenna.x.add_noise(0, 1)
 
 level = stg.voltage.get_level(snr=3e4, 
                               raw_voltage_backend=rvb,
+                              fftlength=fftlength,
                               obs_length=60, 
-                              length_mode='obs_length',
-                              fftlength=fftlength)
+                              length_mode='obs_length')
 
 unit_drift_rate = stg.voltage.get_unit_drift_rate(rvb,
                                                   fftlength=fftlength,
